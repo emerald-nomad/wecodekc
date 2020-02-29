@@ -93,10 +93,39 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./pages/index.tsx":
-/*!*************************!*\
-  !*** ./pages/index.tsx ***!
-  \*************************/
+/***/ "./pages/index/index.styles.ts":
+/*!*************************************!*\
+  !*** ./pages/index/index.styles.ts ***!
+  \*************************************/
+/*! exports provided: IndexContainer, Image */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IndexContainer", function() { return IndexContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Image", function() { return Image; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const IndexContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+const Image = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img`
+  width: 65%;
+  disp
+`;
+
+/***/ }),
+
+/***/ "./pages/index/index.tsx":
+/*!*******************************!*\
+  !*** ./pages/index/index.tsx ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -104,30 +133,48 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/jalengreene/Library/Mobile Documents/com~apple~CloudDocs/Projects/wecodekc/pages/index.tsx";
+/* harmony import */ var _index_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.styles */ "./pages/index/index.styles.ts");
+var _jsxFileName = "/Users/jalengreene/Library/Mobile Documents/com~apple~CloudDocs/Projects/wecodekc/pages/index/index.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-const Home = () => __jsx("h1", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 1
-  },
-  __self: undefined
-}, "Hello world!");
+
+const Home = () => {
+  return __jsx(_index_styles__WEBPACK_IMPORTED_MODULE_1__["IndexContainer"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx(_index_styles__WEBPACK_IMPORTED_MODULE_1__["Image"], {
+    src: "http://wecodekc.org/wp-content/uploads/2020/01/WeCodeKCEventbrite.jpg",
+    alt: "Banner Image",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, "WeCodeKC is fiscally sponsored by Learn Techquity, LLC a 501 c3 organization"));
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
 
 /***/ }),
 
 /***/ 3:
-/*!*******************************!*\
-  !*** multi ./pages/index.tsx ***!
-  \*******************************/
+/*!*************************************!*\
+  !*** multi ./pages/index/index.tsx ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/jalengreene/Library/Mobile Documents/com~apple~CloudDocs/Projects/wecodekc/pages/index.tsx */"./pages/index.tsx");
+module.exports = __webpack_require__(/*! /Users/jalengreene/Library/Mobile Documents/com~apple~CloudDocs/Projects/wecodekc/pages/index/index.tsx */"./pages/index/index.tsx");
 
 
 /***/ }),
@@ -140,6 +187,17 @@ module.exports = __webpack_require__(/*! /Users/jalengreene/Library/Mobile Docum
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "styled-components":
+/*!************************************!*\
+  !*** external "styled-components" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
 
 /***/ })
 
