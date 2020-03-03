@@ -1,7 +1,8 @@
 import { Fragment } from 'react'
 import { Normalize } from 'styled-normalize'
 import Head from 'next/head'
-import { Layout } from '../components'
+
+import 'github-markdown-css'
 
 const MyApp = ({ Component, pageProps }) => {
   return (
@@ -10,9 +11,7 @@ const MyApp = ({ Component, pageProps }) => {
         <title>We Code KC | Home</title>
       </Head>
       <Normalize />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Component {...pageProps} />
     </Fragment>
   )
 }
