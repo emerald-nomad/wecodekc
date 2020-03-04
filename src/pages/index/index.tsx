@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import { IndexContainer, Image } from './index.styles'
+import { IndexContainer, Image } from '../../styles/index.styles'
 
 const Home: NextPage = () => {
   return (
