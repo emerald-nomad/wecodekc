@@ -1,26 +1,42 @@
 import { NextPage } from 'next'
+import Error from 'next/error'
 import matter from 'gray-matter'
 import Markdown from 'react-markdown'
-import CodeBlock from '../../components/code-block'
+import { CodeBlock } from '../../components'
+import { LessonTemplateContainer } from './lessons.styles'
 
-const LessonTemplate: NextPage = ({ data }: any) => {
-  return (
-    <Markdown
-      className="markdown-body"
-      source={data.content}
-      renderers={{ code: CodeBlock }}
-    />
+interface LessonTemplateProps {
+  data: { title: string; description: string }
+  content: string
+  isEmpty: boolean
+}
+
+const LessonTemplate: NextPage<LessonTemplateProps> = ({ data, content }) => {
+  return !data ? (
+    <Error statusCode={404} />
+  ) : (
+    <LessonTemplateContainer>
+      <Markdown
+        className="markdown-body"
+        source={content}
+        renderers={{ code: CodeBlock }}
+      />
+    </LessonTemplateContainer>
   )
 }
 
 LessonTemplate.getInitialProps = async ({ query }) => {
   const { slug } = query
+  let data
 
-  const content = await import(`../../lessons/${slug}.md`)
+  try {
+    const content = await import(`../../lessons/${slug}.md`)
+    data = matter(content.default)
+  } catch (error) {
+    console.error(error)
+  }
 
-  const data = matter(content.default)
-
-  return { data }
+  return { ...data }
 }
 
 export default LessonTemplate
