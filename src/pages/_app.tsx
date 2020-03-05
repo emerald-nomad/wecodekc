@@ -3,6 +3,7 @@ import { Normalize } from 'styled-normalize'
 import Head from 'next/head'
 
 import 'github-markdown-css'
+import { Layout } from '../components'
 
 const MyApp = ({ Component, pageProps }) => {
   return (
@@ -11,7 +12,9 @@ const MyApp = ({ Component, pageProps }) => {
         <title>We Code KC | Home</title>
       </Head>
       <Normalize />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </Fragment>
   )
 }

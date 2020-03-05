@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const LessonTemplateContainer = styled.article`
-  padding: 25px;
-  width: 50%;
+  padding-top: 60px;
+  width: 75%;
   margin: auto;
 `

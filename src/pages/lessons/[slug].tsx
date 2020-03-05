@@ -3,7 +3,7 @@ import Error from 'next/error'
 import matter from 'gray-matter'
 import Markdown from 'react-markdown'
 import { CodeBlock } from '../../components'
-import { LessonTemplateContainer } from './lessons.styles'
+import { LessonTemplateContainer } from '../../styles/lessons.styles'
 
 interface LessonTemplateProps {
   data: { title: string; description: string }
