@@ -20,6 +20,10 @@
     "/lessons/[slug]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
+    ],
+    "/lessons/[slug]": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }
