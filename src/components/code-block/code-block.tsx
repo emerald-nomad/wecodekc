@@ -3,7 +3,7 @@ import { coy } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 const CodeBlock = ({ language, value }: any) => {
   return (
-    <SyntaxHighlighter language={language} style={coy}>
+    <SyntaxHighlighter language={language} style={coy} showLineNumbers>
       {value}
     </SyntaxHighlighter>
   )
